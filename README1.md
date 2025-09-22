@@ -110,6 +110,11 @@ dotnet test
   - Listagem de leads aceitos  
   - Exibe informações adicionais (telefone, e-mail, nome completo)
 
+- **Cadastro de Novos Leads**
+   - Formulário validado para registrar leads direto do painel
+   - Armazenamento automático no SQL Server via API
+   - Feedback visual de sucesso e tratamento de erros
+
 - **Banco de Dados SQL Server**  
   - Persistência de leads, histórico de ações (Accept/Decline)
 
