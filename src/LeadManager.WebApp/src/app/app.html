@@ -1,0 +1,36 @@
+<div class="app-container">
+  <header class="app-header">
+    <h1 class="visually-hidden">{{ title() }}</h1>
+    <nav class="tab-bar" aria-label="Lead views">
+      <button
+        class="tab-button"
+        type="button"
+        [class.active]="activeTab() === 'invited'"
+        (click)="setActiveTab('invited')">
+        Invited
+      </button>
+      <button
+        class="tab-button"
+        type="button"
+        [class.active]="activeTab() === 'accepted'"
+        (click)="setActiveTab('accepted')">
+        Accepted
+      </button>
+      <button
+        class="tab-button"
+        type="button"
+        [class.active]="activeTab() === 'create'"
+        (click)="setActiveTab('create')">
+        Add Lead
+      </button>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <app-invited-leads *ngIf="activeTab() === 'invited'"></app-invited-leads>
+    <app-accepted-leads *ngIf="activeTab() === 'accepted'"></app-accepted-leads>
+    <app-create-lead *ngIf="activeTab() === 'create'"></app-create-lead>
+  </main>
+</div>
+
+<router-outlet />

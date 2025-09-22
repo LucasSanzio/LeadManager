@@ -1,0 +1,37 @@
+<section class="invited-leads-container" aria-labelledby="invited-leads-title">
+  <header class="section-header">
+    <h2 id="invited-leads-title">Invited leads</h2>
+    <p>Review and manage incoming lead requests.</p>
+  </header>
+
+  <div *ngIf="loading" class="loading">
+    <div class="spinner"></div>
+    <p>Loading invited leads...</p>
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+    <button class="retry-btn" (click)="loadInvitedLeads()">Retry</button>
+  </div>
+
+  <div *ngIf="!loading && !error && leads.length === 0" class="empty-state">
+    <div class="empty-icon">📋</div>
+    <h3>No invited leads</h3>
+    <p>There are currently no leads waiting for your review.</p>
+  </div>
+
+  <div *ngIf="!loading && !error && leads.length > 0" class="leads-list">
+    <div class="leads-count">
+      <span>{{ leads.length }} lead{{ leads.length !== 1 ? 's' : '' }} pending review</span>
+    </div>
+
+    <app-lead-card
+      *ngFor="let lead of leads; trackBy: trackByLeadId"
+      [lead]="lead"
+      [showActions]="true"
+      [showContactDetails]="false"
+      (accept)="onAcceptLead($event)"
+      (decline)="onDeclineLead($event)">
+    </app-lead-card>
+  </div>
+</section>

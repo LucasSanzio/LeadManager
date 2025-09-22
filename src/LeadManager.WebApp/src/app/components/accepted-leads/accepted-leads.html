@@ -1,0 +1,36 @@
+<div class="accepted-leads-container">
+  <div class="header visually-hidden">
+    <h2>Accepted Leads</h2>
+    <p class="subtitle">Leads that have been accepted and are ready for processing</p>
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading-container">
+    <div class="spinner"></div>
+    <p>Loading accepted leads...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading" class="error-container">
+    <div class="error-icon">⚠️</div>
+    <p class="error-message">{{ error }}</p>
+    <button class="retry-button" (click)="loadAcceptedLeads()">Try Again</button>
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="!loading && !error && leads.length === 0" class="empty-container">
+    <div class="empty-icon">📋</div>
+    <h3>No Accepted Leads</h3>
+    <p>There are no accepted leads at the moment.</p>
+  </div>
+
+  <!-- Leads List -->
+  <div *ngIf="!loading && !error && leads.length > 0" class="leads-grid">
+    <app-lead-card 
+      *ngFor="let lead of leads; trackBy: trackByLeadId"
+      [lead]="lead"
+      [showActions]="false"
+      [showContactDetails]="true">
+    </app-lead-card>
+  </div>
+</div>

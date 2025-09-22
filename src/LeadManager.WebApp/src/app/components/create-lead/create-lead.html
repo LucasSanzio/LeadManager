@@ -1,0 +1,160 @@
+<section class="create-lead-page" aria-labelledby="create-lead-title">
+  <header class="page-header">
+    <h2 id="create-lead-title">Add a new lead</h2>
+    <p>Capture the job details to invite a new customer to your pipeline.</p>
+  </header>
+
+  <form [formGroup]="leadForm" (ngSubmit)="onCreateLead()" novalidate>
+    <div class="form-grid">
+      <label class="form-field">
+        <span class="form-label">First name</span>
+        <input
+          type="text"
+          formControlName="contactFirstName"
+          autocomplete="given-name"
+          placeholder="Jane"
+          [class.invalid]="getControlInvalid('contactFirstName')"
+        />
+        <span *ngIf="getControlError('contactFirstName', 'required')" class="form-error" aria-live="polite">
+          First name is required.
+        </span>
+        <span *ngIf="getControlError('contactFirstName', 'maxlength')" class="form-error" aria-live="polite">
+          Maximum 100 characters.
+        </span>
+      </label>
+
+      <label class="form-field">
+        <span class="form-label">Last name</span>
+        <input
+          type="text"
+          formControlName="contactLastName"
+          autocomplete="family-name"
+          placeholder="Doe"
+          [class.invalid]="getControlInvalid('contactLastName')"
+        />
+        <span *ngIf="getControlError('contactLastName', 'required')" class="form-error" aria-live="polite">
+          Last name is required.
+        </span>
+        <span *ngIf="getControlError('contactLastName', 'maxlength')" class="form-error" aria-live="polite">
+          Maximum 100 characters.
+        </span>
+      </label>
+
+      <label class="form-field">
+        <span class="form-label">Email</span>
+        <input
+          type="email"
+          formControlName="contactEmail"
+          autocomplete="email"
+          placeholder="jane.doe@email.com"
+          [class.invalid]="getControlInvalid('contactEmail')"
+        />
+        <span *ngIf="getControlError('contactEmail', 'required')" class="form-error" aria-live="polite">
+          Email is required.
+        </span>
+        <span *ngIf="getControlError('contactEmail', 'email')" class="form-error" aria-live="polite">
+          Enter a valid email address.
+        </span>
+        <span *ngIf="getControlError('contactEmail', 'maxlength')" class="form-error" aria-live="polite">
+          Maximum 200 characters.
+        </span>
+      </label>
+
+      <label class="form-field">
+        <span class="form-label">Phone</span>
+        <input
+          type="tel"
+          formControlName="contactPhone"
+          autocomplete="tel"
+          placeholder="(555) 123-4567"
+          [class.invalid]="getControlInvalid('contactPhone')"
+        />
+        <span *ngIf="getControlError('contactPhone', 'required')" class="form-error" aria-live="polite">
+          Phone number is required.
+        </span>
+        <span *ngIf="getControlError('contactPhone', 'maxlength')" class="form-error" aria-live="polite">
+          Maximum 20 characters.
+        </span>
+      </label>
+
+      <label class="form-field">
+        <span class="form-label">Suburb</span>
+        <input
+          type="text"
+          formControlName="suburb"
+          autocomplete="address-level2"
+          placeholder="Sydney CBD"
+          [class.invalid]="getControlInvalid('suburb')"
+        />
+        <span *ngIf="getControlError('suburb', 'required')" class="form-error" aria-live="polite">
+          Suburb is required.
+        </span>
+        <span *ngIf="getControlError('suburb', 'maxlength')" class="form-error" aria-live="polite">
+          Maximum 100 characters.
+        </span>
+      </label>
+
+      <label class="form-field">
+        <span class="form-label">Category</span>
+        <input
+          type="text"
+          formControlName="category"
+          placeholder="Plumbing"
+          [class.invalid]="getControlInvalid('category')"
+        />
+        <span *ngIf="getControlError('category', 'required')" class="form-error" aria-live="polite">
+          Category is required.
+        </span>
+        <span *ngIf="getControlError('category', 'maxlength')" class="form-error" aria-live="polite">
+          Maximum 100 characters.
+        </span>
+      </label>
+
+      <label class="form-field form-field--full">
+        <span class="form-label">Description</span>
+        <textarea
+          formControlName="description"
+          rows="4"
+          placeholder="Describe the job details"
+          [class.invalid]="getControlInvalid('description')"
+        ></textarea>
+        <span *ngIf="getControlError('description', 'required')" class="form-error" aria-live="polite">
+          Description is required.
+        </span>
+        <span *ngIf="getControlError('description', 'maxlength')" class="form-error" aria-live="polite">
+          Maximum 1000 characters.
+        </span>
+      </label>
+
+      <label class="form-field">
+        <span class="form-label">Price</span>
+        <input
+          type="number"
+          min="0"
+          step="0.01"
+          inputmode="decimal"
+          formControlName="price"
+          placeholder="450"
+          [class.invalid]="getControlInvalid('price')"
+        />
+        <span *ngIf="getControlError('price', 'required')" class="form-error" aria-live="polite">
+          Price is required.
+        </span>
+        <span *ngIf="getControlError('price', 'min')" class="form-error" aria-live="polite">
+          Price must be greater than or equal to 0.
+        </span>
+      </label>
+    </div>
+
+    <div class="form-footer">
+      <div class="form-messages" aria-live="polite">
+        <span *ngIf="formSuccess" class="form-success">{{ formSuccess }}</span>
+        <span *ngIf="formError" class="form-error form-error--general">{{ formError }}</span>
+      </div>
+      <button class="submit-button" type="submit" [disabled]="submitting">
+        <span *ngIf="!submitting">Add lead</span>
+        <span *ngIf="submitting">Adding...</span>
+      </button>
+    </div>
+  </form>
+</section>

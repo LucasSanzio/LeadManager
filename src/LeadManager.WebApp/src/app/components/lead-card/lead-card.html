@@ -1,0 +1,78 @@
+<div class="lead-card">
+  <div class="lead-card__header">
+    <div class="lead-card__profile">
+      <div class="lead-card__avatar">
+        {{ lead.contactFirstName ? lead.contactFirstName.charAt(0).toUpperCase() : '?' }}
+      </div>
+      <div class="lead-card__identity">
+        <div class="lead-card__name">
+          {{
+            showContactDetails && isLeadAccepted(lead)
+              ? (lead.contactFullName || lead.contactFirstName + ' ' + lead.contactLastName)
+              : lead.contactFirstName
+          }}
+        </div>
+        <div class="lead-card__timestamp">{{ formatDate(lead.dateCreated) }}</div>
+      </div>
+    </div>
+    <div class="lead-card__amount">
+      <div class="lead-card__price">{{ formatPrice(lead.price) }}</div>
+      <div class="lead-card__price-label">Lead Invitation</div>
+    </div>
+  </div>
+
+  <div class="lead-card__meta">
+    <div class="meta-item">
+      <span class="meta-icon" aria-hidden="true">📍</span>
+      <div>
+        <div class="meta-label">Suburb</div>
+        <div class="meta-value">{{ lead.suburb }}</div>
+      </div>
+    </div>
+    <div class="meta-item">
+      <span class="meta-icon" aria-hidden="true">🛠️</span>
+      <div>
+        <div class="meta-label">Category</div>
+        <div class="meta-value">{{ lead.category }}</div>
+      </div>
+    </div>
+    <div class="meta-item">
+      <span class="meta-icon" aria-hidden="true">#</span>
+      <div>
+        <div class="meta-label">Job ID</div>
+        <div class="meta-value">{{ lead.id }}</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="lead-card__description">{{ lead.description }}</p>
+
+  <div *ngIf="showContactDetails && isLeadAccepted(lead)" class="lead-card__contact">
+    <div class="contact-item">
+      <span class="contact-icon" aria-hidden="true">👤</span>
+      <span class="contact-label">Contact</span>
+      <span class="contact-value">
+        {{ lead.contactFullName || lead.contactFirstName + ' ' + lead.contactLastName }}
+      </span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon" aria-hidden="true">✉️</span>
+      <span class="contact-label">Email</span>
+      <a class="contact-link" [href]="'mailto:' + lead.contactEmail">{{ lead.contactEmail }}</a>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon" aria-hidden="true">📞</span>
+      <span class="contact-label">Phone</span>
+      <a class="contact-link" [href]="'tel:' + lead.contactPhone">{{ lead.contactPhone }}</a>
+    </div>
+  </div>
+
+  <div *ngIf="showActions" class="lead-card__actions">
+    <button class="action-button action-button--accept" type="button" (click)="onAccept()">
+      Accept
+    </button>
+    <button class="action-button action-button--decline" type="button" (click)="onDecline()">
+      Decline
+    </button>
+  </div>
+</div>

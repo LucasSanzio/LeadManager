@@ -1,0 +1,373 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\tests\\LeadManager.Tests\\LeadManager.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.API\\LeadManager.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.API\\LeadManager.API.csproj",
+        "projectName": "LeadManager.API",
+        "projectPath": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.API\\LeadManager.API.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj"
+              },
+              "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Infrastructure\\LeadManager.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Infrastructure\\LeadManager.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj",
+        "projectName": "LeadManager.Application",
+        "projectPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.Domain\\LeadManager.Domain.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.Domain\\LeadManager.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.Domain\\LeadManager.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.Domain\\LeadManager.Domain.csproj",
+        "projectName": "LeadManager.Domain",
+        "projectPath": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.Domain\\LeadManager.Domain.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Infrastructure\\LeadManager.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Infrastructure\\LeadManager.Infrastructure.csproj",
+        "projectName": "LeadManager.Infrastructure",
+        "projectPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Infrastructure\\LeadManager.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.25, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\tests\\LeadManager.Tests\\LeadManager.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\tests\\LeadManager.Tests\\LeadManager.Tests.csproj",
+        "projectName": "LeadManager.Tests",
+        "projectPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\tests\\LeadManager.Tests\\LeadManager.Tests.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\tests\\LeadManager.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.API\\LeadManager.API.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.API\\LeadManager.API.csproj"
+              },
+              "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Downloads\\LEADMANAGER\\src\\LeadManager.Application\\LeadManager.Application.csproj"
+              },
+              "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.Domain\\LeadManager.Domain.csproj": {
+                "projectPath": "C:\\Users\\lucas\\Downloads\\LeadManager\\src\\LeadManager.Domain\\LeadManager.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[8.6.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
